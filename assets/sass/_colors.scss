@@ -1,0 +1,10 @@
+$golden: rgb(248, 189, 27);
+$white: whitesmoke;
+$blueSky: rgb(31, 210, 223);
+$brightGreen: rgb(106, 252, 8);
+$darkRed: rgb(255, 14, 14);
+$darkBlue: rgb(12, 4, 34);
+$yellowGreen: yellowgreen;
+//gradients combined
+/* $lightBlueDarkBlue: linear-gradient(45deg, $darkBlue 49%, $blueSky 48%); */
+$lightBlueDarkBlue: linear-gradient(to top, $darkBlue 87%, $blueSky 17%);

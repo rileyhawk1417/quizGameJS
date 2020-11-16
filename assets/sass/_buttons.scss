@@ -1,0 +1,182 @@
+@import 'config';
+@import 'colors';
+
+#button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    width: 50%;
+}
+
+.startButton{
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    border: 1px solid black;
+    color: white;
+    transition: all 0.25s;
+    transition-timing-function: $bounce;
+    outline: none;
+}
+
+.startButton:hover{
+    background-color: $yellowGreen;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 6px;
+    border: 2px solid black;
+    transform: scale(1.2);
+    box-shadow: $smallBoxShadow;
+    color: black;
+}
+
+#highScore:hover{
+    background-color: $golden;
+}
+
+.startClicker{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+    outline: none;
+}
+
+
+.choiceButton{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    border: 0px;
+    transition-property: all 0.5s;
+    transition-timing-function: $bounceTiming;
+    transition-delay: 0s;
+    outline: none;
+    font-family: novaFlat, cursive;
+
+    i{
+        font-size: 20px;
+    }
+}
+
+.choiceButton:hover{
+    border-radius: 10px;
+    box-shadow: 10px 8px 6px -5px black;
+    transition: all 0.5s;
+}
+
+.ans{
+    outline: none;
+    background-color: whitesmoke;
+    width: 320px;
+    height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    padding: $answers;
+    margin-bottom: 10px;
+    transition: all 0.25s;
+    transition-timing-function: $bounce;
+    outline: none;
+    font-family: novaFlat, cursive;
+}
+
+.ans:hover{
+    outline: none;
+    background-color: $yellowGreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    border: 2px solid black;
+    box-shadow: 0px 14px 3px -3px black;
+    transform: $translateBounce;
+}
+
+
+#controllers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+}
+
+#restart:hover{
+    //color: $darkRed;
+    background-color: $darkRed;
+}
+
+#next:hover{
+    //color: $yellowGreen;
+    background-color: $yellowGreen;
+}
+
+#quit:hover{
+    //color: $golden;
+    background-color: $golden;
+}
+
+
+.scoreButtons{
+    outline: none;
+    background: transparent;
+    border: 1px solid black;
+}
+
+.scoreButtons:hover{
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: $bounceTiming;
+    transition-delay: 0s;
+}
+
+.home:hover{
+    background: $golden;
+}
+
+.save:hover{
+    background: $yellowGreen;
+}
+
+.cancel:hover{
+    background: $darkRed;
+}
+
+.scoreEntry{
+    text-align: center;
+    outline: none;
+    border: none;
+}
+
+.homeButton{
+    background: transparent;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: $bounceTiming;
+    transition-delay: 0s;
+}
+
+.homeButton:hover{       
+    background-color: $yellowGreen;
+}
+
+//Combination of all the buttons
+.startButton:hover,
+#highScore:hover,
+.choiceButton:hover,
+.ans:hover,
+#restart:hover,
+#next:hover,
+.scoreButtons:hover,
+.homeButton:hover{
+    cursor: pointer;
+    box-shadow: $smallBoxShadow;
+    outline: none;
+}

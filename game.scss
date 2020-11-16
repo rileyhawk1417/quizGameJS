@@ -1,0 +1,50 @@
+@import 'assets/sass/colors';
+@import 'assets/sass/buttons';
+@import 'assets/sass/cards';
+@import 'assets/sass/config';
+@import 'assets/sass/screens/gameScreenWide';
+/* 
+#main-box{
+    background-image: ;
+}
+ */
+.wrong{
+    background-color: $darkRed;
+    color: white;
+}
+
+.correct{
+    background-color: $yellowGreen;
+    color: white;
+}
+
+.wrong, .correct{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 2s;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: $bounceFreeze;
+    transition-delay: 0s;
+    font-family: novaFlat, cursive;
+    outline: none;
+}
+
+.scoreButtons{
+    width: 380px;
+    height: 65px;
+    border-radius: 9px;
+    margin-bottom: 30px;
+}
+
+.scoreEntry{
+    margin-bottom: 25px;
+    border-radius: 15px;
+    width: 401px;
+    height: 70px;
+}
+
+.narration{
+    margin-top: -60px;
+}

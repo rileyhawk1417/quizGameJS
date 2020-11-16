@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/game.css">
+    <script src="../assets/fonts/js/all.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main id="main-box" class="displayBox boxCard">
+        <div id="top" class="headerElements">
+            <div class="scoreCounter" id="score">
+                <h1 id="scoreTitle" class="score">Score:</h1>
+                <p id="scoreNumber" class="score"></p>
+            </div>
+            <div id="time-box" class="timer">
+                <h1 class="displayTimeLeft"></h1>
+                <p class="displayEndTime"></p>
+            </div>
+        </div>
+        <div id="ques-box">
+            <div id="img-box">
+                <img id="image">
+            </div>
+            <div id="question-bar">
+                Question
+            </div>
+        </div>
+        <div id="button">
+            <a href="#" class="startClicker startButton">
+                <b id="start" class="startGame">
+                    <p>
+                        Start the game
+                    </p>
+                    <i class="fas fa-play"></i>
+                </b>
+            </a>
+        </div>
+        <div id="ans-box">
+<!--                         <button class="ans">a</button>
+                    <button class="ans">b</button>
+                    <button class="ans">c</button>
+                    <button class="ans">d</button> -->
+        </div>
+        <div id="controllers" class="decisions">
+            <button id="restart" class="choiceButton">Reset<i class="fas fa-redo" style="font-size: 20px;"></i></button>
+            <button id="next" class="choiceButton">Next<i class="fas fa-arrow-right" style="font-size: 20px;"></i></button>
+        </div>
+    </main>
+    <script type="module" src="../assets/js/highScores.js"></script>
+</body>
+</html>

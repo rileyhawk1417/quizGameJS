@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/geometry.css">
+        <link rel="stylesheet" href="styles/index.css">
+        <script src="assets/fonts/js/all.js"></script>
+        <title>Geometry Games</title>
+    </head>
+    <body>
+        <main id="welcomeSection">
+            <p>Ready To Play?</p>
+            <div id="button">
+                    <button id="start" class="startGame startClicker startButton">
+                        <p>
+                            Start the game
+                        </p>
+                        <i class="fas fa-play"></i>
+                    </button>
+                <button id="highScore" class="startGame startClicker startButton">
+                    <p>
+                        High Scores
+                    </p>
+                    <i class="fas fa-crown"></i>
+                </button>
+            </div>
+        </main>
+        <script type="text/javascript">
+           let startButton = document.querySelector('#start');
+           let highScoreButton = document.querySelector('#highScore');
+
+           startButton.addEventListener('click', () =>{
+               location.replace('/pages/game.html');
+           });
+
+           highScoreButton.addEventListener('click', () =>{
+               location.replace('/pages/highScore.html');
+           });
+        </script>
+    </body>
+</html>

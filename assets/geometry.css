@@ -1,0 +1,17 @@
+.timer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+p{
+    color: white;
+}
+
+span{
+    color: white;
+}
+
+ */
