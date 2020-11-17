@@ -92,7 +92,7 @@ const restartGame = () =>{
 }
 
 const goHome = () =>{
-    location.replace('../../geometry.html');
+    location.replace('../../index.html');
 }
 
 /* const highScoreDisplay = () =>{
