@@ -1,7 +1,7 @@
 import {values} from './endGame.js';
-//import {clearElementsHighScore} from './endGame.js';
-//values.highScore
+
 let highScores = JSON.parse(window.localStorage.getItem('highScore')) || [];
+
 function clearElementsHighScore(){
     values.topElements.style.visibility = "hidden";
     values.startContainer.style.display = "none";
@@ -31,7 +31,7 @@ function clearElementsHighScore(){
 
     homeButton.addEventListener('click', () =>{
         location.replace('../../index.html');
-    })
+    });
 }
 
 window.onload = () =>{clearElementsHighScore()};

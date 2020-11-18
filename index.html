@@ -9,6 +9,7 @@
     </head>
     <body>
         <main id="welcomeSection">
+            <div id="setTime"></div>
             <p>Ready To Play?</p>
             <div id="button">
                     <button id="start" class="startGame startClicker startButton">
@@ -30,11 +31,11 @@
            let highScoreButton = document.querySelector('#highScore');
 
            startButton.addEventListener('click', () =>{
-               location.replace('/pages/game.html');
+               location.replace('pages/game.html');
            });
 
            highScoreButton.addEventListener('click', () =>{
-               location.replace('/pages/highScore.html');
+               location.replace('pages/highScore.html');
            });
         </script>
     </body>

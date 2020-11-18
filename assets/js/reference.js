@@ -1,9 +1,3 @@
-/*
-Some Functions are as they say 
-descriptively. Mostly comments are for me
-since i tend to forget at times ^_^
-*/
-
 import {questions} from './questions.js';
 
 const imgDisplay = document.getElementById('image');
@@ -25,23 +19,47 @@ restart.addEventListener('click', restartGame);
 
 next.addEventListener('click',  nextQuestion);
 
-let shuffledQuestions, currentQuestion, countdown;
+let shuffledQuestions, currentQuestion;
 let score = 0;
+let countdown;
+
+/* function loadJSON(){
+    let xhr = new XMLHttpRequest();
+
+    xhr.open('GET', '../assets/JSON/scores.json', true);
+
+    xhr.onload = function(){
+        if (this.status == 200){
+            let reply = JSON.parse(this.responseText);
+            for (let i=0; i<reply.length; i++){
+                console.log(reply[i].name);
+                console.log(reply[i].score);
+            }
+        } else if (this.status == 404){
+            console.error(error);
+        }
+        else{
+            console.log('error');
+        }
+    }
+    let dummyName = "Jackson";
+    reply.name(dummyName);
+    xhr.send();
+}
+loadJSON(); */
+
+
 
 //resets the game and the state and goes back to the welcome function
 function restartGame(){
     resetState();
     score = 0;
-    //take it back to the beginning of the game
     location.reload();
+    //take it back to the beginning of the game
 } 
 
-/*
-starts game by removing some elements and 
-preparing the questions.
-Questions are selected randomly using array 
-function sort and math function random
-*/
+//starts game by removing some elements and preparing the questions
+//questions are selected randomly using array function sort and math function random
 function startGame(){
     startTimer();
     loadGameElements();
@@ -76,8 +94,13 @@ function nextQuestion(){
     } 
 
     else {
+        //alert(`You have reached the end of the quiz. Your score is ${score}`);
         let saveScore = localStorage.setItem('recentScore', score);
         location.replace('../../pages/endGame.html');
+        console.log(saveScore);
+        //endGame();
+        //restartGame();
+
     }
 }
 
@@ -90,6 +113,7 @@ function loadNextQuestion(){
 //question is the argument for our array with the questions
 function loadQuestions(question){
     imgLoad();
+    //setTimeout(nextQuestion, 60000);
     controllers.style.visibility = "visible";
     box.classList.remove('displayBox');
     questionBar.innerText = question.ques;
@@ -103,11 +127,8 @@ function loadQuestions(question){
         }
         button.addEventListener('click', choiceSelect);
         answerBox.appendChild(button);
-        /*
-        putting this function in causes a stack error in memory
-        loadNextQuestion();
-        */
-    });
+        //loadNextQuestion();//this causes call stack error
+    })
 }
 
 //this function determines if the answer is correct with argument (e) is for events
@@ -119,6 +140,8 @@ function choiceSelect(e){
     });
     if(correct){
         score+=1;
+        console.log('Correct');
+        console.log(score);
         scoreBoard.innerHTML=score;
     }
 }
@@ -174,6 +197,7 @@ function displayTimeLeft(seconds){
 function displayEndTime(timeStamp){
     const end = new Date(timeStamp);
     const mins = end.getMinutes();
+    //${mins < 10 ? '0' : ''}${mins}
 }
 
 function startTimer(){
@@ -185,6 +209,7 @@ function endGame(){
     let saveScore = localStorage.setItem('recentScore', score);
     alert("You didnt finish in time");
     location.replace('../../pages/endGame.html');
+    console.log(saveScore);
 }
 
 //resets by removing first child of the element

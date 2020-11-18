@@ -16,6 +16,9 @@ let highScore = JSON.parse(localStorage.getItem('highScores')) || [];
 //let userSave = localStorage.getItem('name');
 let getScore = localStorage.getItem('recentScore');
 
+let enterScore = document.createElement('input');
+enterScore.placeholder = "Enter Name";
+
 export function clearElements(){
     values.topElements.style.visibility = "hidden";
     values.startContainer.style.display = "none";
@@ -29,15 +32,12 @@ export function clearElements(){
 }
 
 function saveScore(){
+    //create elements
     let saveText = "Would you like to save your score ?";
     let narration = document.createElement('p');
     narration.innerHTML = saveText;
-    
-    //name save entry
-    let enterScore = document.createElement('input');
-    enterScore.placeholder = "Enter Name";
 
-    //save button attributes
+    //create Buttons and add properties
     let saveButton = document.createElement('button');
     saveButton.innerText = "Save";
 
@@ -46,14 +46,11 @@ function saveScore(){
 
     let restartButton = document.createElement('button');
     restartButton.innerText = "Restart Game?";
-
-/*     let highScoreButton = document.createElement('button');
-    highScoreButton.innerText = "High Scores"; */
-    
-    //cancel button attributes
+  
     let cancelButton = document.createElement('button');
     cancelButton.innerText = "Cancel";
-    //append buttons
+
+    //append buttons and add classes
     values.box.appendChild(narration);
     narration.classList.add('narration');
 
@@ -72,18 +69,14 @@ function saveScore(){
     restartButton.classList.add('scoreButtons');
     restartButton.classList.add('save');
 
-/*     values.box.appendChild(highScoreButton);
-    highScoreButton.classList.add('scoreButtons'); */
-
     values.box.appendChild(cancelButton);
     cancelButton.classList.add('scoreButtons');
     cancelButton.classList.add('cancel');
 
-    
+    //add Event listeners
     saveButton.addEventListener('click', saveGame);
     homeButton.addEventListener('click', goHome);
     restartButton.addEventListener('click', restartGame);
-    //highScoreButton.addEventListener('click', highScoreDisplay);
     cancelButton.addEventListener('click', goHome);
 }
 
@@ -95,10 +88,6 @@ const goHome = () =>{
     location.replace('../../index.html');
 }
 
-/* const highScoreDisplay = () =>{
-    location.replace('../../pages/highScore.html');
-}
- */
 const saveGame = e =>{
     e.preventDefault();
     let txtInput = document.querySelector('input');
@@ -113,12 +102,9 @@ const saveGame = e =>{
         return b.score - a.score;
     }); 
      highScore.splice(5);
-     //localStorage.setItem('highScore', JSON.stringify(highScore));
      localStorage.setItem('highScore', JSON.stringify(highScore));
-     location.replace('/pages/highScore.html');
+     location.replace('pages/highScore.html');
     console.log(score.name);
-    //console.log(values.highScore.score.name);
-    //location.replace('../../pages/game.html');
 }
 
 window.onload = () =>{clearElements()};
