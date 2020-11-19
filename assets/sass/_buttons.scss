@@ -6,13 +6,12 @@
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
-    width: 50%;
 }
 
 .startButton{
     background-color: transparent;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-flow: row wrap;
     border: 1px solid black;
@@ -20,6 +19,7 @@
     transition: all 0.25s;
     transition-timing-function: $bounce;
     outline: none;
+    text-decoration: none;
 }
 
 .startButton:hover{
@@ -31,22 +31,12 @@
     border: 2px solid black;
     transform: scale(1.2);
     box-shadow: $smallBoxShadow;
-    color: black;
+    color: white;
 }
 
 #highScore:hover{
     background-color: $golden;
 }
-
-.startClicker{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    text-decoration: none;
-    outline: none;
-}
-
 
 .choiceButton{
     display: flex;
@@ -80,7 +70,6 @@
     justify-content: center;
     align-items: center;
     border-radius: 6px;
-    padding: $answers;
     margin-bottom: 10px;
     transition: all 0.25s;
     transition-timing-function: $bounce;

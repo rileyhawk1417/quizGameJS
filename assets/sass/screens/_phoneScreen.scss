@@ -5,12 +5,13 @@
 /*
 These are settings for a wide screen
 Some elements and transitions are only 
-available for a desktop or laptop
+available for tablet or smaller 
+laptop/desktop screen
 */
 :root{
     background: $blueSky;
 }
-@media screen and (min-width: $desktop){
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
     .boxCard{
         width: 100%;
     }
@@ -21,10 +22,6 @@ available for a desktop or laptop
 
     #button{
         width: 100%;
-
-        #start, #highScore{
-            font-size: 40px;
-        }
     }
 
 /*     #ques-box{
@@ -35,17 +32,22 @@ available for a desktop or laptop
     /*Start of Buttons*/
     .startButton{
         width: 100%;
-        height: 60px;
+        height: 120px;
         border-radius: 8px;
 
-        .start, .highscore{
-            font-size: 45px;
+        i{
+            font-size: 27px;
         }
 
     }
 
+    #start, #highScore{
+        font-size: 22px;
+    }
+
     .title{
-        font-size: 45px;
+        font-size: 42px;
+        text-align: center;
         margin-bottom: 15px;
     }
 
@@ -56,24 +58,22 @@ available for a desktop or laptop
         box-shadow: 0px 10px 3px -3px black;
     }
 
-    .startClicker{
-        width: 100%;
-        margin-bottom: 35px;
-        height: 80px;
-    }
-
     .ans{
-        padding: $answers;
+        padding: $answersPhoneSize; 
         font-size: 20px;
     }
 
     .choiceButton{
-        width: 200px;
+        width: 50%;
+        padding: $answersPhoneSize;
         height: 60px;
-        /* margin-left: 110px; */
-        margin-right: 110px;
+        margin-right: 10px;
         border-radius: 5px;
-        font-size: 48px;
+        font-size: 40px;
+    }
+
+    #quit, #next{
+        margin-top: 10px;
     }
 
     .choiceButton:hover{
@@ -87,7 +87,9 @@ available for a desktop or laptop
     }
 
     #controllers{
+        margin-top: -15px;
         margin-bottom: 30px;
+        flex-flow: row wrap;
     }
 
     .homeButton{
@@ -133,7 +135,7 @@ available for a desktop or laptop
         flex-flow: column wrap;;
         .displayTimeLeft{
             align-self: flex-end;
-            font-size: 60px;
+            font-size: 25px;
             font-family: novaFlat, cursive;
         }
     }
@@ -147,7 +149,7 @@ available for a desktop or laptop
     }
 
     .score{
-        font-size: 60px;
+        font-size: 30px;
         font-family: novaFlat, cursive;
     }
 
@@ -160,7 +162,7 @@ available for a desktop or laptop
         flex-direction: row;
         justify-content: center;
         align-items: baseline;
-        width: 62%;
+        width: 75%;
     }
 
     ul{

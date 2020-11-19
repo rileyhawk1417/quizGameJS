@@ -10,8 +10,10 @@ $smallBoxShadow: 0px 10px 3px -3px black;
 $desktop: 960px;
 $tablet: 768px;
 $mobile: 360px;
+$galaxyFold: 280px;
 //element sizes
-$answers: 35px 0px 35px 0px;
+$answers: 35px 0 35px 0;
+$answersPhoneSize: 25px 0 25px 0;
 //fonts
 @font-face{
     font-family: novaFlat;

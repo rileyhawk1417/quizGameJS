@@ -103,7 +103,7 @@ const saveGame = e =>{
     }); 
      highScore.splice(5);
      localStorage.setItem('highScore', JSON.stringify(highScore));
-     location.replace('pages/highScore.html');
+     location.replace('../../pages/endGame.html');
     console.log(score.name);
 }
 

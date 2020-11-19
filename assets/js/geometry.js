@@ -19,11 +19,9 @@ const next = document.getElementById('next');
 const timeBox = document.getElementById('time-box');
 const remainingTime = document.querySelector('.displayTimeLeft');
 const topElements = document.querySelector('#top');
+const escapeKey = document.querySelector('#quit');
 let scoreBoard = document.querySelector('#scoreNumber');
 
-restart.addEventListener('click', restartGame);
-
-next.addEventListener('click',  nextQuestion);
 
 let shuffledQuestions, currentQuestion, countdown;
 let score = 0;
@@ -177,7 +175,7 @@ function displayEndTime(timeStamp){
 }
 
 function startTimer(){
-    let seconds=30;
+    let seconds=120;
     countDownTimer(seconds);
 }
 
@@ -187,12 +185,26 @@ function endGame(){
     location.replace('../../pages/endGame.html');
 }
 
+const quitGame = () =>{
+    let saveScore = localStorage.setItem('recentScore', score);
+    alert("You quit the game");
+    location.replace('../../pages/endGame.html');
+};
+
 //resets by removing first child of the element
 function resetState(){
     while(answerBox.firstChild){
         answerBox.removeChild(answerBox.firstChild);
     }
 }
+
+//event listeners
+restart.addEventListener('click', restartGame);
+
+next.addEventListener('click',  nextQuestion);
+
+escapeKey.addEventListener('click', quitGame);
+
 
 //when window loads it runs start game function
 window.onload = () =>{startGame()};
