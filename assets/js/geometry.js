@@ -175,7 +175,7 @@ function displayEndTime(timeStamp){
 }
 
 function startTimer(){
-    let seconds=120;
+    let seconds=20;
     countDownTimer(seconds);
 }
 
