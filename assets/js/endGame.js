@@ -80,15 +80,16 @@ function saveScore(){
     cancelButton.addEventListener('click', goHome);
 }
 
-const restartGame = () =>{
+
+function restartGame(){
     location.replace('../../pages/game.html');
 }
 
-const goHome = () =>{
+function goHome(){
     location.replace('../../index.html');
 }
 
-const saveGame = e =>{
+function saveGame(e){
     e.preventDefault();
     let txtInput = document.querySelector('input');
     let userName = txtInput.value;
