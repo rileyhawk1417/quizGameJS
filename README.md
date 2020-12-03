@@ -5,7 +5,6 @@
 The game is entirely built using Vanilla JavaScript without using any frameworks. I would consider it good practice to enhance your skills.
 The game uses Local Storage to keep the previous score entered by the user local storage. Local storage uses a key:value system
 so the value is overwritten every time a new score is entered.
-The live example is running on a subdomain which you can visit here [Quiz Game](https://sourcehub.freetzi.com/sources/highschool/olevel/geometry/index.html)
 
 ## **Please Note**
 - Some of the codes in the README.md are just pieces I picked out to explain which parts of the code work. The actual code is a bit confusing but there are some comments that will help. Overtime will be refactoring and experimenting trying to add new feature/functions. 😁
