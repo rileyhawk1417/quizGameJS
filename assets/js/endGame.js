@@ -86,7 +86,7 @@ function restartGame(){
 }
 
 function goHome(){
-    location.replace('../../index.html');
+    location.replace('../../../../index.html');
 }
 
 function saveGame(e){
@@ -104,7 +104,7 @@ function saveGame(e){
     }); 
      highScore.splice(5);
      localStorage.setItem('highScore', JSON.stringify(highScore));
-     location.replace('../../pages/endGame.html');
+     location.replace('../../../../projects/quizGameJS/pages/highScore.html');
     console.log(score.name);
 }
 

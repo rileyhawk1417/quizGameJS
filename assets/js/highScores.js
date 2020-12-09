@@ -30,7 +30,7 @@ function clearElementsHighScore(){
     homeButton.classList.add('homeButton');
 
     homeButton.addEventListener('click', () =>{
-        location.replace('../../index.html');
+        location.replace('../../../../index.html');
     });
 }
 

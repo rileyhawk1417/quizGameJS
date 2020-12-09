@@ -75,7 +75,7 @@ function nextQuestion(){
 
     else {
         let saveScore = localStorage.setItem('recentScore', score);
-        location.replace('../../pages/endGame.html');
+        location.replace('../../../../pages/endGame.html');
     }
 }
 
@@ -182,13 +182,13 @@ function startTimer(){
 function endGame(){
     let saveScore = localStorage.setItem('recentScore', score);
     alert("You didnt finish in time");
-    location.replace('../../pages/endGame.html');
+    location.replace('../../../../pages/endGame.html');
 }
 
 const quitGame = () =>{
     let saveScore = localStorage.setItem('recentScore', score);
     alert("You quit the game");
-    location.replace('../../pages/endGame.html');
+    location.replace('../../../../pages/endGame.html');
 };
 
 //resets by removing first child of the element
